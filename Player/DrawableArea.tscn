@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm5g0dn48e5ia"]
+
+[ext_resource type="Script" uid="uid://bsno536ti4rg7" path="res://Player/drawable_area.gd" id="1_n1bla"]
+
+[sub_resource type="Gradient" id="Gradient_tok1r"]
+offsets = PackedFloat32Array(0, 0.633117, 0.717532)
+colors = PackedColorArray(0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_12rnm"]
+gradient = SubResource("Gradient_tok1r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1bla"]
+radius = 200.0
+
+[node name="DrawableArea" type="Area2D" node_paths=PackedStringArray("_line_preview")]
+script = ExtResource("1_n1bla")
+_scroll_scale = 1.0
+_line_preview = NodePath("Preview")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(1, 1)
+scale = Vector2(6.90625, 6.90625)
+texture = SubResource("GradientTexture2D_12rnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n1bla")
+
+[node name="Preview" type="Line2D" parent="."]
