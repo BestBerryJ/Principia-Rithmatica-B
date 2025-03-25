@@ -19,5 +19,6 @@ texture = ExtResource("2_0xm2m")
 [node name="UImain" parent="CanvasLayer" instance=ExtResource("3_h2yge")]
 
 [node name="Chalkling" parent="." instance=ExtResource("4_1bvp3")]
+visible = false
 position = Vector2(510, 735)
 scale = Vector2(0.2, 0.2)
