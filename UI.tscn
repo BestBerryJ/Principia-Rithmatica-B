@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://gfqadhemmber"]
+
+[ext_resource type="Texture2D" uid="uid://buv5h7hchpq8d" path="res://Chalkling/chalkling_placeholder.png" id="1_b3bc3"]
+
+[node name="UImain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 281.0
+grow_vertical = 2
+current_tab = 0
+
+[node name="MenuButton" type="MenuButton" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/MenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+columns = 2
+
+[node name="Button" type="Button" parent="TabContainer/MenuButton/GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_b3bc3")
+
+[node name="Button2" type="Button" parent="TabContainer/MenuButton/GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_b3bc3")
+
+[node name="Button3" type="Button" parent="TabContainer/MenuButton/GridContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="TabContainer/MenuButton/GridContainer"]
+layout_mode = 2
+
+[node name="MenuButton2" type="MenuButton" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1

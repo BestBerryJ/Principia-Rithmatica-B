@@ -1,0 +1,31 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1742872049
+camera_2d.gd::GDScript::2211272475382980965::1742777333::0::1::::<>Camera2D<><>0<>0<><>::
+default_env.tres::Environment::117476004467850885::1742872049::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D/CompressedTexture2D::2756529930870145956::1742355456::1742364035::1::::<><><>0<>0<>9e92edf5e6928ef2027666c9a4795f43<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+main.gd::GDScript::4101701307379955084::1742869408::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::6123919856802305930::1742872049::0::1::::<><><>0<>0<><>::uid://byo5ok8ptpqpg::::res://main.gd<>uid://bxtbmiohm8deh::::res://Artwork/Chalkboard.png<>uid://gfqadhemmber::::res://UI.tscn<>uid://4eot6cj2llhe::::res://Chalkling/Chalkling.tscn
+pointer.png::CompressedTexture2D/CompressedTexture2D::8683443244392063585::1742360125::1742364035::1::::<><><>0<>0<>8162634f4e6535f7ed68c54841eca32b<>res://.godot/imported/pointer.png-1cfc1373c364efd7dde6b7804e352ca4.ctex::
+UI.tscn::PackedScene::432426591064688637::1742872049::0::1::::<><><>0<>0<><>::uid://buv5h7hchpq8d::::res://Chalkling/chalkling_placeholder.png
+WardingSegment2.png::CompressedTexture2D/CompressedTexture2D::5175988653809264051::1666244358::1742364035::1::::<><><>0<>0<>8e425596741de00af2b33856ec57fcf3<>res://.godot/imported/WardingSegment2.png-d8e7f0918cd9fe522b4b2a22f53362eb.ctex::
+::res://Artwork/::1742871232
+Chalkboard.png::CompressedTexture2D/CompressedTexture2D::4040069853364054467::1742777127::1742777129::1::::<><><>0<>0<>c7e878eba000dfc399ead3dd75a55392<>res://.godot/imported/Chalkboard.png-3faef5ce4342f54604113f7f3c9a5ea6.ctex::
+Chalkboard.svg::CompressedTexture2D/CompressedTexture2D::5398026463916882116::1742870434::1742871232::1::::<><><>0<>0<>a7cb5b72197352b2db344f02e23a4013<>res://.godot/imported/Chalkboard.svg-f7e49373eabeb449d4c2cf3a7d3da241.ctex::
+Chalkboard.svg.2025_03_23_17_43_13.0.svg::CompressedTexture2D/CompressedTexture2D::5992993239934426889::1742776993::1742776998::1::::<><><>0<>0<>6e4028b75aa282eef59e7b2b2dc6fea7<>res://.godot/imported/Chalkboard.svg.2025_03_23_17_43_13.0.svg-ac13169926792583d6633a01e73966c5.ctex::
+Circle final.svg::CompressedTexture2D/CompressedTexture2D::425097589442648157::1742404384::1742440314::1::::<><><>0<>0<>66187142ef8be82ba169b226bf6d9a09<>res://.godot/imported/Circle final.svg-62219990411e5343f2325db729e5e0fc.ctex::
+Circle workable.svg::CompressedTexture2D/CompressedTexture2D::8918373693157041802::1742404373::1742440314::1::::<><><>0<>0<>0f6d412cde267e6c8a264761d1cfad23<>res://.godot/imported/Circle workable.svg-2b47ec44bad05fd6214b0c2b0bf41116.ctex::
+Player placeholder.svg::CompressedTexture2D/CompressedTexture2D::2879527398943647912::1742397433::1742397477::1::::<><><>0<>0<>3723794cc62a881b9a3d9a9359cdf1f8<>res://.godot/imported/Player placeholder.svg-c5d922802953bb95ae99898a5e88caa6.ctex::
+pointer.svg::CompressedTexture2D/CompressedTexture2D::7605517306005252018::1742397422::1742397477::1::::<><><>0<>0<>eaa3fa17a9050902e46e6f80cae54b98<>res://.godot/imported/pointer.svg-ebec75695b4113869afb527c94688c61.ctex::
+::res://Chalkling/::1742872114
+chalkling_placeholder.png::CompressedTexture2D::3835385191291002125::1742872114::1742872119::1::::<><><>0<>0<>8dc372a310a187ddacd8aee03e16ba14<>res://.godot/imported/chalkling_placeholder.png-e921a8bc11ce94a118b3758a9f123430.ctex::
+Chalkling.tscn::PackedScene::2044619576261010246::1742872049::0::1::::<><><>0<>0<><>::uid://buv5h7hchpq8d::::res://Chalkling/chalkling_placeholder.png
+::res://Player/::1742872049
+Player placeholder.png::CompressedTexture2D/CompressedTexture2D::1536360600359155433::1742359729::1742396407::1::::<><><>0<>0<>754da30fd4a817c0817039b67caea650<>res://.godot/imported/Player placeholder.png-c6d393a0df8250fbe30e12cc52b6ee52.ctex::
+Player.gd::GDScript::7313510074072422439::1742871915::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.tscn::PackedScene::4120490087703015513::1742872049::0::1::::<><><>0<>0<><>::uid://dcgypbog023xb::::res://Player/Player.gd<>uid://v5hvtvhlascn::::res://Player/Player placeholder.png<>uid://6rflm2cfr3tx::::res://camera_2d.gd
+::res://Warding/::1742872049
+warding.gd::GDScript::7371618413502618186::1742866740::0::1::::<>Area2D<><>0<>0<><>::
+Warding.tscn::PackedScene::3879354109290496477::1742872049::0::1::::<><><>0<>0<><>::uid://dda4qi4wxbywg::::res://Warding/warding.gd<>uid://ij4na62xnptk::::res://Warding/warding_segment.tscn
+WardingSegment.png::CompressedTexture2D/CompressedTexture2D::819338439888744591::1742404260::1742404261::1::::<><><>0<>0<>91a2113795af7ab0b958cd53ec85c520<>res://.godot/imported/WardingSegment.png-2c80b29c55c687554214dbe562604776.ctex::
+warding_segment.gd::GDScript::4288156204224712477::1742779314::0::1::::<>Sprite2D<><>0<>0<><>::
+warding_segment.tscn::PackedScene::581874206148746180::1742872049::0::1::::<><><>0<>0<><>::uid://b2dhkn67f1pht::::res://Warding/warding_segment.gd<>uid://lw5ncmnbytj8::::res://Warding/WardingSegment.png

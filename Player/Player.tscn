@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://byx84tn870ci0"]
+
+[ext_resource type="Script" uid="uid://dcgypbog023xb" path="res://Player/Player.gd" id="1_q3lat"]
+[ext_resource type="Texture2D" uid="uid://v5hvtvhlascn" path="res://Player/Player placeholder.png" id="2_tok1r"]
+[ext_resource type="Script" uid="uid://6rflm2cfr3tx" path="res://camera_2d.gd" id="3_tok1r"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tok1r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
+radius = 20.0
+
+[node name="Player2D" type="CharacterBody2D"]
+collision_layer = 35
+collision_mask = 35
+script = ExtResource("1_q3lat")
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 0)
+sprite_frames = SubResource("1")
+
+[node name="PlayerSmallCollide" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tok1r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_tok1r")

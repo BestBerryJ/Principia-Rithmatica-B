@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://4eot6cj2llhe"]
+
+[ext_resource type="Texture2D" uid="uid://buv5h7hchpq8d" path="res://Chalkling/chalkling_placeholder.png" id="1_vsvgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofwy5"]
+size = Vector2(220, 164)
+
+[node name="Chalkling" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vsvgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ofwy5")
