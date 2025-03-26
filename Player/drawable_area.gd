@@ -1,9 +1,11 @@
-extends Area2D
+extends Area2D # TODO: actually only allow drawing within the area bounds
 
-const RithmaticLines = preload("res://RithmaticLines/rithmatic_lines.gd")
+const RithmaticLines : GDScript = preload("res://RithmaticLines/rithmatic_lines.gd")
+const draw_action_scene : PackedScene = preload("res://Player/DrawAction.tscn")
 
 @export var _scroll_scale: float
 @export var _line_preview: Line2D
+@export var _action_queue: ActionQueue
 
 var _is_placing_line: bool
 var _placement: Placement
@@ -45,6 +47,9 @@ func _input(event: InputEvent) -> void:
 		_line_preview.points = _placement.to_polyline()
 		
 func confirm_placement() -> void:
-	var new_node : Node = Line2D.new()
-	new_node.points = _placement.to_polyline()
-	add_sibling(new_node)
+	var line_node : Line2D = _line_preview.duplicate()
+	line_node.material = _line_preview.material.duplicate()
+	var draw_action : Node = draw_action_scene.instantiate()
+	draw_action._line = line_node
+	draw_action.add_child(line_node)
+	_action_queue.enqueue(draw_action)
