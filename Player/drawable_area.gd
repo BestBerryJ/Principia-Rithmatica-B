@@ -1,7 +1,6 @@
 extends Area2D
 
 const RithmaticLines = preload("res://RithmaticLines/rithmatic_lines.gd")
-const Placement = preload("res://Player/placement.gd")
 
 @export var _scroll_scale: float
 @export var _line_preview: Line2D
@@ -15,7 +14,7 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		var mouse_event = event as InputEventMouseButton
+		var mouse_event : InputEventMouseButton = event as InputEventMouseButton
 		
 		match mouse_event.button_index:
 			MOUSE_BUTTON_LEFT:
@@ -27,16 +26,16 @@ func _input(event: InputEvent) -> void:
 				_placement.p1 = _placement.p0
 			
 			MOUSE_BUTTON_WHEEL_UP:
-				_placement.change_scale(mouse_event.factor)
+				_placement.change_scale(mouse_event.factor * _scroll_scale)
 				
 			MOUSE_BUTTON_WHEEL_DOWN:
-				_placement.change_scale(-mouse_event.factor)
+				_placement.change_scale(-mouse_event.factor * _scroll_scale)
 	
 	elif event is InputEventMouseMotion:
 		_placement.p1 = get_global_mouse_position()
 		
 	else:
-		for line_type in RithmaticLines.Types.values():
+		for line_type : int in RithmaticLines.Types.values():
 			if line_type == _placement.type or not event.is_action_pressed(RithmaticLines.type_name(line_type)):
 				continue
 			_placement.type = line_type
@@ -46,6 +45,6 @@ func _input(event: InputEvent) -> void:
 		_line_preview.points = _placement.to_polyline()
 		
 func confirm_placement() -> void:
-	var new_node = Line2D.new()
+	var new_node : Node = Line2D.new()
 	new_node.points = _placement.to_polyline()
 	add_sibling(new_node)
