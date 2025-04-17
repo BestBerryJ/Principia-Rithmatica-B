@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ctiqchrtanxmo"]
 
-[ext_resource type="Script" uid="uid://byo5ok8ptpqpg" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bxtbmiohm8deh" path="res://Artwork/Chalkboard.png" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://gfqadhemmber" path="res://UI.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://4eot6cj2llhe" path="res://Chalkling/Chalkling.tscn" id="4_1bvp3"]

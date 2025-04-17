@@ -1,8 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bm5g0dn48e5ia"]
 
-[ext_resource type="Script" uid="uid://bsno536ti4rg7" path="res://Player/drawable_area.gd" id="1_n1bla"]
-[ext_resource type="Script" uid="uid://rpt0qxi8gq5q" path="res://Player/action_queue.gd" id="2_dbjoc"]
-[ext_resource type="Shader" uid="uid://dfv8e5nt2g5bf" path="res://Player/fill.gdshader" id="2_yvtwh"]
+[ext_resource type="Script" path="res://Player/drawable_area.gd" id="1_n1bla"]
+[ext_resource type="Script" path="res://Player/action_queue.gd" id="2_dbjoc"]
+[ext_resource type="Shader" path="res://Player/fill.gdshader" id="2_yvtwh"]
+[ext_resource type="Texture2D" uid="uid://7wapl4wt6pus" path="res://Artwork/chalk_tex.tres" id="3_sotc3"]
 
 [sub_resource type="Gradient" id="Gradient_tok1r"]
 offsets = PackedFloat32Array(0, 0.633117, 0.717532)
@@ -16,12 +17,10 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1bla"]
 radius = 200.0
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yvtwh"]
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqx8m"]
 shader = ExtResource("2_yvtwh")
 shader_parameter/fill_length = 0.0
-shader_parameter/tex = SubResource("NoiseTexture2D_yvtwh")
+shader_parameter/tex = ExtResource("3_sotc3")
 
 [node name="DrawableArea" type="Area2D" node_paths=PackedStringArray("_line_preview", "_action_queue")]
 script = ExtResource("1_n1bla")
@@ -40,6 +39,7 @@ shape = SubResource("CircleShape2D_n1bla")
 
 [node name="Preview" type="Line2D" parent="."]
 material = SubResource("ShaderMaterial_pqx8m")
+width = 20.0
 texture_mode = 1
 
 [node name="ActionQueue" type="Timer" parent="."]
