@@ -1,4 +1,5 @@
-# A bunch of constants for rithmatic lines
+# Static class for rithmatic line definitions
+class_name RithmaticLines
 
 enum Types {
 	WARDING,

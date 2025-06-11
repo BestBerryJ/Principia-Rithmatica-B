@@ -1,6 +1,5 @@
 class_name Placement
 
-var RithmaticLines : GDScript = preload("res://RithmaticLines/rithmatic_lines.gd")
 var type : int #RithmaticLines.Type
 var p0 : Vector2
 var p1: Vector2

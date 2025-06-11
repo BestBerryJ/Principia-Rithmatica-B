@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://gfqadhemmber"]
+[gd_scene load_steps=2 format=3 uid="uid://sa2vwfc1n7pc"]
 
-[ext_resource type="Texture2D" uid="uid://buv5h7hchpq8d" path="res://Chalkling/chalkling_placeholder.png" id="1_b3bc3"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8yd3w"]
+load_path = "res://.godot/imported/chalkling_placeholder.png-e921a8bc11ce94a118b3758a9f123430.ctex"
 
 [node name="UImain" type="Control"]
 layout_mode = 3
@@ -16,7 +17,6 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 281.0
 grow_vertical = 2
-current_tab = 0
 
 [node name="MenuButton" type="MenuButton" parent="TabContainer"]
 layout_mode = 2
@@ -34,11 +34,11 @@ columns = 2
 
 [node name="Button" type="Button" parent="TabContainer/MenuButton/GridContainer"]
 layout_mode = 2
-icon = ExtResource("1_b3bc3")
+icon = SubResource("CompressedTexture2D_8yd3w")
 
 [node name="Button2" type="Button" parent="TabContainer/MenuButton/GridContainer"]
 layout_mode = 2
-icon = ExtResource("1_b3bc3")
+icon = SubResource("CompressedTexture2D_8yd3w")
 
 [node name="Button3" type="Button" parent="TabContainer/MenuButton/GridContainer"]
 layout_mode = 2

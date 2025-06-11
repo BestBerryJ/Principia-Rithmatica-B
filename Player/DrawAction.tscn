@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://d016j4nw2amk2"]
 
-[ext_resource type="Script" path="res://Player/draw_action.gd" id="1_8s3ut"]
+[ext_resource type="Script" path="res://Player/DrawAction.gd" id="1_aiem7"]
 
 [node name="DrawAction" type="Node"]
-script = ExtResource("1_8s3ut")
+script = ExtResource("1_aiem7")
 _draw_speed = 20.0

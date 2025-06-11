@@ -1,6 +1,5 @@
 extends Area2D # TODO: actually only allow drawing within the area bounds
 
-const RithmaticLines : GDScript = preload("res://RithmaticLines/rithmatic_lines.gd")
 const draw_action_scene : PackedScene = preload("res://Player/DrawAction.tscn")
 
 @export var _scroll_scale: float

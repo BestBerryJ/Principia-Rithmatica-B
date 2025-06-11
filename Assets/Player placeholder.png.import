@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buv5h7hchpq8d"
-path="res://.godot/imported/chalkling_placeholder.png-e921a8bc11ce94a118b3758a9f123430.ctex"
+uid="uid://v5hvtvhlascn"
+path="res://.godot/imported/Player placeholder.png-6035e6a9e6c16a0cdc3d2493d136c61e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chalkling/chalkling_placeholder.png"
-dest_files=["res://.godot/imported/chalkling_placeholder.png-e921a8bc11ce94a118b3758a9f123430.ctex"]
+source_file="res://Assets/Player placeholder.png"
+dest_files=["res://.godot/imported/Player placeholder.png-6035e6a9e6c16a0cdc3d2493d136c61e.ctex"]
 
 [params]
 
