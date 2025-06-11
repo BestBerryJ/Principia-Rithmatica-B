@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Principia Rithmatica"
-run/main_scene="res://Player/DrawAction.tscn"
+run/main_scene="res://player/drawable_action.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
@@ -21,7 +21,7 @@ gdscript/warnings/untyped_declaration=1
 
 [display]
 
-mouse_cursor/custom_image="res://Assets/pointer.png"
+mouse_cursor/custom_image="res://assets/pointer.png"
 mouse_cursor/custom_image_hotspot=Vector2(21, 0)
 
 [dotnet]

@@ -1,6 +1,6 @@
 extends Area2D # TODO: actually only allow drawing within the area bounds
 
-const draw_action_scene : PackedScene = preload("res://Player/DrawAction.tscn")
+const draw_action_scene : PackedScene = preload("res://player/drawable_action.tscn")
 
 @export var _scroll_scale: float
 @export var _line_preview: Line2D

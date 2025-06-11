@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bm5g0dn48e5ia"]
 
-[ext_resource type="Script" path="res://Player/DrawableArea.gd" id="1_n1bla"]
-[ext_resource type="Script" path="res://Player/ActionQueue.gd" id="2_dbjoc"]
-[ext_resource type="Shader" path="res://Player/fill.gdshader" id="2_yvtwh"]
+[ext_resource type="Script" path="res://player/drawable_area.gd" id="1_n1bla"]
+[ext_resource type="Script" path="res://player/action_queue.gd" id="2_dbjoc"]
+[ext_resource type="Shader" path="res://player/fill.gdshader" id="2_yvtwh"]
 
 [sub_resource type="Gradient" id="Gradient_tok1r"]
 offsets = PackedFloat32Array(0, 0.633117, 0.717532)
@@ -17,7 +17,6 @@ fill_from = Vector2(0.5, 0.5)
 radius = 200.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emrby"]
-load_path = "res://.godot/imported/Chalkboard.png-e99bb7d553cd2bf95d89bc9c7cc0017c.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqx8m"]
 shader = ExtResource("2_yvtwh")
