@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjv2cjsf8t8hj"]
+
+[ext_resource type="PackedScene" uid="uid://ddeyjn6jtekbu" path="res://player/player.tscn" id="1_k8gwq"]
+[ext_resource type="Script" path="res://match/SharedWorld.gd" id="1_uvwew"]
+
+[node name="Match" type="Node"]
+
+[node name="SharedWorld" type="Node2D" parent="."]
+script = ExtResource("1_uvwew")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Player1" parent="Players" node_paths=PackedStringArray("anchor", "shared_world") instance=ExtResource("1_k8gwq")]
+anchor = NodePath("../Player1Anchor")
+shared_world = NodePath("../../SharedWorld")
+
+[node name="Player1Anchor" type="Node2D" parent="Players"]
+position = Vector2(462, 370)

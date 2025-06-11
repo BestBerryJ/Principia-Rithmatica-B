@@ -1,46 +1,71 @@
-[gd_scene load_steps=6 format=3 uid="uid://byx84tn870ci0"]
+[gd_scene load_steps=11 format=3 uid="uid://ddeyjn6jtekbu"]
 
+[ext_resource type="Script" path="res://player/drawable_area.gd" id="1_mmwg8"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_q3lat"]
-[ext_resource type="Texture2D" uid="uid://v5hvtvhlascn" path="res://assets/player_placeholder.png" id="2_km35p"]
+[ext_resource type="Shader" path="res://lines/shaders/fill.gdshader" id="3_tghwg"]
+[ext_resource type="Script" path="res://player/line_preview.gd" id="3_u5f22"]
+[ext_resource type="Script" path="res://player/action_queue.gd" id="4_c21s0"]
 
-[sub_resource type="SpriteFrames" id="1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_km35p")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="Gradient" id="Gradient_tok1r"]
+offsets = PackedFloat32Array(0, 0.633117, 0.717532)
+colors = PackedColorArray(0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
-radius = 20.0
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_12rnm"]
+gradient = SubResource("Gradient_tok1r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="GDScript" id="GDScript_ehawq"]
-script/source = "extends Camera2D
-var zoom_out
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1bla"]
+radius = 200.0
 
-func _process(delta):
-	if Input.is_action_pressed(\"zoom_out\"):
-		zoom = Vector2(1,1)
-	else:
-		zoom = Vector2(2,2)
-"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emrby"]
 
-[node name="Player2D" type="CharacterBody2D"]
-collision_layer = 35
-collision_mask = 35
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1fv2"]
+shader = ExtResource("3_tghwg")
+shader_parameter/fill_length = 0.0
+shader_parameter/is_valid = null
+shader_parameter/tex = SubResource("CompressedTexture2D_emrby")
+
+[node name="Player" type="Node"]
 script = ExtResource("1_q3lat")
-speed = 10000
-draw_range = 100
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(10, 0)
-sprite_frames = SubResource("1")
+[node name="LocalWorld" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="PlayerSmallCollide" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_tok1r")
+[node name="DrawableArea" type="Area2D" parent="LocalWorld"]
+unique_name_in_owner = true
+script = ExtResource("1_mmwg8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-script = SubResource("GDScript_ehawq")
+[node name="DrawableAreaSprite" type="Sprite2D" parent="LocalWorld/DrawableArea"]
+self_modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(1, 1)
+scale = Vector2(6.90625, 6.90625)
+texture = SubResource("GradientTexture2D_12rnm")
+
+[node name="DrawableAreaCollision" type="CollisionShape2D" parent="LocalWorld/DrawableArea"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_n1bla")
+
+[node name="LinePreview" type="Line2D" parent="LocalWorld"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_y1fv2")
+width = 20.0
+texture_mode = 1
+script = ExtResource("3_u5f22")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActionQueue" type="VFlowContainer" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 100.0
+grow_vertical = 2
+script = ExtResource("4_c21s0")

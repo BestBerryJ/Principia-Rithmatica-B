@@ -5,15 +5,34 @@ var p0 : Vector2
 var p1: Vector2
 var axis_scale: float
 
-func _init(_type: int, _point: Vector2) -> void:
+func _init(
+		_type: int = RithmaticLines.Types.WARDING, \
+		_p0: Vector2 = Vector2.ZERO, \
+		_p1 : Vector2 = Vector2.ZERO, \
+		_axis_scale: float = 1
+	) -> void:
 	type = _type
-	p0 = _point
-	p1 = _point
-	axis_scale = 1
-	
+	p0 = _p0
+	p1 = _p1
+	axis_scale = _axis_scale
+
+func serialize() -> Dictionary:
+	return {
+		"type" : type,
+		"p0" : p0,
+		"p1" : p1,
+		"axis_scale": axis_scale
+	}
+
+static func deserialize(req: Dictionary) -> Placement:
+	return Placement.new(req["type"], req["p0"], req["p1"], req["axis_scale"])
+
 func change_scale(factor: float) -> void:
 	axis_scale = clamp(axis_scale + factor, 0.1, 5)
-	
+
+func reset() -> void:
+	axis_scale = 1
+
 func to_polyline() -> Array[Vector2]:
 	match type:
 		RithmaticLines.Types.FORBIDDANCE:

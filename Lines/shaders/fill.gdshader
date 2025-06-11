@@ -1,6 +1,7 @@
 shader_type canvas_item;
 uniform float fill_length;
 uniform sampler2D tex;
+uniform bool is_valid;
 
 varying vec2 f_pos;
 varying vec2 f_tangent;
@@ -51,13 +52,14 @@ float fbm(vec2 uv) {
 
 
 void fragment() {
+	vec3 color = is_valid ? vec3(1.0) : vec3(1.0, 0.0, 0.0);
+	
 	float tex_strength = fbm(f_pos / 40.0);
 	float feather = smoothstep(0.0, 1.0, 1.0 - 2.0 * (abs(UV.y - 0.5)));
 	feather = feather < 0.2 ? 0.0 : feather;
 	
-	float fill = UV.x > fill_length ? 0.5 : 1.0;
+	float fill = UV.x > fill_length ? 0.2 : 1.0;
 	float alpha = tex_strength * feather * fill;
 	
-	COLOR = vec4(vec3(1.0), alpha);
-	//COLOR = vec4(UV, 0.0, 1.0);
+	COLOR = vec4(color, alpha);
 }

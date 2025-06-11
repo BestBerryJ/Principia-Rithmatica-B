@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://byx84tn870ci0"]
+
+[ext_resource type="Script" path="res://player/player_character.gd" id="1_ikk1g"]
+[ext_resource type="Texture2D" uid="uid://v5hvtvhlascn" path="res://assets/player_placeholder.png" id="2_qhdgh"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qhdgh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
+radius = 20.0
+
+[sub_resource type="GDScript" id="GDScript_ehawq"]
+script/source = "extends Camera2D
+var zoom_out
+
+func _process(delta):
+	if Input.is_action_pressed(\"zoom_out\"):
+		zoom = Vector2(1,1)
+	else:
+		zoom = Vector2(2,2)
+"
+
+[node name="Player2D" type="CharacterBody2D"]
+collision_layer = 35
+collision_mask = 35
+script = ExtResource("1_ikk1g")
+speed = 10000
+draw_range = 100
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 0)
+sprite_frames = SubResource("1")
+
+[node name="PlayerSmallCollide" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tok1r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = SubResource("GDScript_ehawq")
